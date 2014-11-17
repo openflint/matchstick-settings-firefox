@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WIFI SETTING</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="assets/css/all.css">
+</head>
+
+<body>
+    <div class="body">
+        <h1>WIFI SETTING</h1>
+        <div id="dongle-list" class="main">
+            <nav class="title"><h2><span class="lang" data="select_device"></span></h2></nav>
+            <div class="box">
+                <h3><span class="lang" data="ready_devices"></span></h3>
+                <div id="dongle-rlist"></div>
+            </div>
+            <div class="box nosettings">
+                <h3><span class="lang" data="wait_devices"></span></h3>
+                <div id="dongle-unlist"></div>
+            </div>
+        </div>
+
+        <div id="set-name" class="main hide">
+            <nav class="title">
+                <h2><span class="lang" data="device_rename"></span></h2>
+                <div to="dongle-list" class="goback">
+                    <i class="i i-back"></i>
+                    <span class="lang" data="to_device_list"></span>
+                </div>
+            </nav>
+            <div>
+                <span class="lang" data="please_select_wifi"></span>
+            </div>
+            <div class="field">
+                <p><span class="lang" data="input_dongle_name"></span></p>
+            </div>
+            <div>
+                <span id="btn-set-name" to="show-code" class="btn btn-submit btn-to"><span class="lang" data="set_device_name"></span></span>
+            </div>
+        </div>
+
+        <div id="show-code" class="main hide">
+            <nav class="title">
+                <h2><span class="change_tv_input"></span></h2>
+                <div to="set-name" class="goback">
+                    <i class="i i-back"></i>
+                    <span class="lang" data="to_device_name"></span>
+                </div>
+            </nav>
+            <div class="noti-title">
+                <span class="lang" data="has_code"></span>
+            </div>
+            <div class="code-area">
+                <img src="assets/imgs/show-code.png"/>
+                <span id="tv-code"></span>
+            </div>
+            <div class="field">
+                <span to="set-wifi" class="btn btn-submit btn-to"><span class="lang" data="see_code"></span></span>
+            </div>
+            <div class="field">
+                <span to="set-name" class="btn btn-cancel btn-to"><span class="lang" data="no_code"></span></span>
+            </div>
+        </div> 
+
+        <div id="set-wifi" class="main hide">
+            <nav class="title">
+                <h2><span class="lang" data="set_wifi"></span></h2>
+                <div to="set-name" class="goback">
+                    <i class="i i-back"></i>
+                    <span class="lang" data="to_device_name"></span>
+                </div>
+            </nav>
+            <div class="field">
+                <label><span class="lang" data="wifi_network"></span></label>
+                <div>
+                    <select id="wifi-join" name="wifi"></select>
+                    <span class="btn btn-wifi-refresh" ip=""><span class="lang" data="refresh"></span></span>
+                </div>
+            </div>
+            <div class="field">
+                <label><span class="lang" data="wifi_pwd"></span></label>
+                <p>
+                    <input id="wifi-password" type="password" name="password" />
+                </p>
+            </div>
+            <div>
+                <span id="btn-set-wifi" class="btn btn-submit"><span class="lang" data="set_wifi_network"></span></span>
+                <span class="alert-success hide"><span class="lang" data="chek_wifi_setting_success"></span></span>
+            </div>
+        </div>
+
+        <div id="status-fail" class="main hide">
+            <nav class="title">
+                <h2><span class="lang" data="device_status"></span></h2>
+            </nav>
+            <div class="noti-title">
+                <span class="lang" data="device_not_found"></span>
+            </div>
+            <div class="mblock clearfix">
+                <div class="mleft">
+                    <p class="d-title"><span class="lang" data="check_setting"></span></p>
+                    <p class="s"><span class="lang" data="check_setting_hdmi"></span></p>
+                    <p class="s"><span class="lang" data="check_setting_usb"></span></p>
+                    <p class="s"><span class="lang" data="check_setting_port"></span></p>
+                    <div class="btnarea">
+                        <span class="btn btn-submit"><span class="lang" data="try_again"></span></span>
+                    </div>
+                </div>
+                <div class="mright">
+                    <img src="assets/imgs/d-not-f.png"/>
+                </div>
+            </div>
+        </div>
+
+        <div id="status-success" class="main hide">
+            <nav class="title">
+                <h2><span class="lang" data="device_status"></span></h2>
+            </nav>
+            <div class="noti-title">
+                <span class="lang" data="set_success"></span>
+            </div>
+            <div class="mblock clearfix">
+                <div class="mleft">
+                    <p class="d-title">
+                        <span class="lang" data="success_notice"></span>
+                    </p>
+                    <div class="btnarea">
+                        <span class="btn btn-submit"><span class="lang" data="setting_finish"></span></span>
+                    </div>
+                </div>
+                <div class="mright">
+                    <img src="assets/imgs/d-f.png"/>
+                </div>
+            </div>
+        </div>
+
+        <div id="detail" class="main hide">
+            <nav class="title">
+                <h2><span class="lang" data="device_info"></span></h2>
+                <div to="dongle-list" class="goback">
+                    <i class="i i-back"></i>
+                    <span class="lang" data="to_device_list"></span>
+                </div>
+            </nav>
+            <div class="field field-line clearfix">
+                <label><span class="lang" data="device_name"></span></label>
+                <div class="cont">
+                    <input id="reset-dongle-name" type="text" name="dongle-name" value="" />
+                </div>
+            </div>
+            <div class="field field-line clearfix">
+                <label><span class="lang" data="wifi_network"></span></label>
+                <div class="cont">
+                    <select id="wifi" name="wifi-used"></select>
+                    <span id="wifi-refresh-ip" class="btn-wifi-refresh"><span class="lang" data="refresh"></span></span>
+                </div>
+            </div>
+            <div class="field field-line clearfix">
+                <label><span class="lang" data="wifi_pwd"></span></label>
+                <div class="cont">
+                    <input id="reset-wifi-password" type="password" name="password" />
+                </div>
+            </div>
+            <div class="field field-line clearfix">
+                <label><span class="lang" data="time_zone"></span></label>
+                <div class="cont">
+                    <select id="loc" name="loc"></select>
+                </div>
+            </div>
+            <div class="field field-line clearfix">
+                <label><span class="lang" data="language"></span></label>
+                <div class="cont">
+                    <select id="lang" name="lang">
+                        <option value="zh-CN" class="lang" data="zh_cn"></option>
+                        <option value="en-US" class="lang" data="en_us"></option>
+                    </select>
+                </div>
+            </div>
+            <div class="field field-line clearfix">
+                <label><span class="lang" data="screen"></span></label>
+                <div class="cont">
+                    <select id="pix" name="pix">
+                        <option value="100">100%</option>
+                        <option value="70">70%</option>
+                        <option value="50">50%</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <span id="btn-reset" class="btn btn-submit"><span class="lang" data="reset"></span></span>
+                <span id="btn-reboot" class="btn btn-cancel"><span class="lang" data="reboot"></span></span>
+            </div>
+            <div class="share">
+                <h3><span class="lang" data="data_share"></span></h3>
+                <hr/>
+                <div class="field">
+                    <input id="report" type="checkbox" name="report" value="1">
+                    <label class="checkbox" for="report"><span class="lang" data="send_error_data"></span></label>
+                </div>
+                <div class="field">
+                    <input id="check_upd" type="checkbox" name="check_upd" value="1">
+                    <label class="checkbox" for="check_upd"><span class="lang" data="check_serial"></span></label>
+                </div>
+            </div>
+            <div class="dongle_desc">
+                <hr/>
+                <p><span class="lang" data="ip_addr"></span><span id="dongle-ip"></span></p>
+                <p><span class="lang" data="mac_addr"></span><span id="dongle-mac"></span></p>
+                <p><span class="lang" data="software_version"></span><span id="dongle-ver"></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="hide">
+        <div id="temp-un-dlist">
+            <ul class="ditem dunsetitem btn-to clearfix" data-name="##name##" data-mac="##mac##">
+                <li class="icon"><i class="i wifi-off"></i></li>
+                <li class="name">##name##</li>
+                <li class="setting-icon"><i class="i setting-more"></i></li>
+                <li class="settings"><span class="lang" data="need_setting"></span></li>
+            </ul>
+        </div>
+
+        <div id="temp-r-dlist">
+            <ul class="ditem clearfix" data-name="##name##" data-mac="##mac##" data-ip="##ip##">
+                <li class="icon"><i class="i wifi-on"></i></li>
+                <li class="name">##name##</li>
+                <li class="setting-icon"><i class="i setting-more"></i></li>
+                <li class="settings"><span class="lang" data="ready_to_fling"></span></li>
+            </ul>
+        </div>
+        <input type="text" id="curr-unset-dongle" value="" />
+    </div>
+    <div id="maskback" class="maskback"></div>
+    <div id="maskmain" class="maskmain">
+        <div class="cont">
+            <div class="title">
+                Alert Info
+            </div>
+            <div class="data">
+                <span class="lang" data="set_wifi_before"></span>
+            </div>
+            <div class="btns">
+                <span class="btn btn-submit close"><span class="lang" data="close"></span></span>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="assets/js/all.js"></script>
+</html>

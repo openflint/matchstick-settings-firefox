@@ -1,0 +1,75 @@
+body{font-size: 14px;font-family: "Microsoft Yahei",Helvetica,Tahoma,Arial;padding: 0;margin: 0;}
+    ul li{ list-style: none outside none;}
+    ul,li{padding: 0;margin: 0;}
+    input, button { border-radius: 0 }
+    input[type=text],input[type=password],select{width: 60%; padding: 8px 8px; border: 1px solid #e1e4e6; border-radius: 1px; background: #ffffff; font-size: 16px; line-height: 24px; color: #333;  *margin: -1px 0;}
+    button{padding: 5px 10px;}
+    h1,h2,h3{margin: 0;padding: 0;}
+    label{display: block;margin-bottom: 5px;}
+    .alert-success{color: ;margin-left: 10px;color: #08c;}
+    .clearfix:after { content: "."; display: block; height: 0; clear: both; overflow: hidden }
+    .clearfix {display: block}
+    .clearie{clear:both;display: block;float: none;position: relative;top: auto;width: auto;}
+    .hide{display: none;}
+    .i{background: url("../imgs/i.png") no-repeat scroll center 0;display: inline-block;}
+        .i.wifi-on{width: 40px;height: 30px;background-position: 0 0;}
+        .i.wifi-off{width: 40px;height: 30px;background-position: 0 -39px;}
+        .i.setting-more{width: 20px;height: 28px;background-position: 0 -82px;}
+        .i.i-back{width: 10px;height: 14px;background-position: 0 -157px;}
+        .i.i-sdown{width: 32px;height: 19px;background-position: 0 -110px;}
+    .btn{display: inline-block;padding: 10px 20px;color: #FFF;cursor: pointer;margin-right: 15px;}
+        .btn.btn-submit{background: #FF9000;}
+            .btn.btn-submit:hover{background: #8C8883;}
+        .btn.btn-cancel{background: #A9A9A9;}
+            .btn.btn-cancel:hover{background: #8C8883;}
+    hr{border: none;height: 1px;background: #e2e2e2;}
+    .body{width: 1170px;margin: 0 auto;background:#f1f3f3;}
+        .body h1{text-align: center;background: #1c1b17;color: #FFF;font-size: 40px;font-family: Helvetica,Arial;height: 58px;line-height: 68px;text-align: left;padding-left: 20px; font-weight: 500;}
+
+        .body .main{margin: 20px 20px 0 20px;padding-bottom: 20px;}
+            .body .main .title{margin-bottom: 50px;}
+                .body .main .title h2{font-size: 16px;color: #676767;border-bottom: 1px solid #b2b2b2;padding-bottom: 7px;}
+                .body .main .title .goback{color: #FF9000;height: 14px;line-height: 14px;display: inline-block;cursor: pointer;margin-top: 10px;}
+                    .body .main .title .goback .i{float: left;}
+                    .body .main .title .goback span{float: left;margin-left: 5px;}
+            .body .main .box{padding: 0 20px;margin-bottom: 30px;}
+                .body .main .box h3{font-size: 14px;color: #676767;margin-bottom: 10px;}
+                .body .main .box .ditem{background: #FFF;border:1px solid #BFC1C5;margin-bottom: 10px;cursor: pointer;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;-moz-box-shadow: 0px 0px 5px #ccc;-webkit-box-shadow: 0px 0px 5px #ccc;box-shadow: 0px 0px 5px #ccc;}
+                    .body .main .box .ditem:hover{background: #fefefe;}
+                    .body .main .box .ditem li{float: left;margin-left: 20px;height: 48px;line-height: 48px;}
+
+                        .body .main .box .ditem li .wifi-on{margin-top: 10px;}
+                        .body .main .box .ditem li .wifi-off{margin-top: 10px;}
+                        .body .main .box .ditem li .setting-more{margin-top: 13px;}
+
+                        .body .main .box .ditem li.name{font-size: 28px;}
+                        .body .main .box .ditem li.settings{float: right;color: #FFB14C;}
+                            .body .main .box.nosettings  .ditem li.settings{color: #006BAF;}
+                        .body .main .box .ditem li.setting-icon{float: right;margin-right: 10px;}
+            .body .main .field{color: #006BAF;margin-bottom: 20px;}
+                .body .main .field label.checkbox{display: inline;color: #7a7a7a;cursor: pointer;margin-left: 10px;}
+                .body .main .field input[type='text'], .body .main .field input[type='password']{width: 450px;}
+                .body .main .field select{width: 470px;}
+                .body .main .field.field-line label{float: left;margin-right: 15px;height: 26px;line-height: 32px;width:145px;text-align: left;}
+                .body .main .field.field-line .cont{float: left;}
+                    .body .main .field.field-line .cont input{width: 300px;}
+                    .body .main .field.field-line .cont select{width:320px;}
+
+            .body .main .noti-title{font-size: 24px;margin-bottom: 20px;}
+            .body .main .code-area{position: relative;}
+                .body .main .code-area span{position: absolute;left: 20px;top:27px;font-size: 90px;color: #0079BF;font-weight: bold;}
+            .body .main .share{margin-top: 70px;color: #7a7a7a;}
+                .body .main .share hr{margin-bottom: 20px}
+            .body .main .dongle_desc{margin-top: 70px;color: #7a7a7a;}
+            .body .main .mblock{margin-top: 40px;}
+                .body .main .mblock .mleft{float: left;max-width: 400px;}
+                    .body .main .mblock .mleft .d-title{font-size: 18px;margin-bottom: 20px;}
+                        .body .main .mblock .mleft .s{color: #0079BF;margin-bottom: 10px;font-size: 16px;}
+                        .body .main .mblock .mleft .btnarea{margin-top: 30px;}
+                .body .main .mblock .mright{float: left;margin-left: 150px;}
+                .body .main .btn-wifi-refresh{cursor: pointer;color: #006BAF;}
+            .maskback{background: #000;opacity: 0.5;position: absolute;z-index: 998;width: 100%;left: 0;top: 0;display: none;}
+            .maskmain{position: absolute;z-index: 999;display: none;background: #FFF;font-size: 16px;width:600px;border-radius: 3px;padding: 10px;}
+                .maskmain .title{text-align: left;height: 30px;line-height: 30px;font-size: 20px;border-bottom: 1px solid #EEE;}
+                .maskmain .data{text-align: center;color: #006BAF;margin: 10px;}
+                .maskmain .btns{text-align: center;}
