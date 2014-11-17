@@ -1,8 +1,8 @@
 {
-  "name": "matchstick-wifi-setting",
-  "title": "Matchstick WIFI Setting",
+  "name": "matchstick-settings",
+  "title": "Matchstick Settings",
   "id": "jid1-Qf2BDuHsv2inBA",
-  "description": "Matchstick WIFI Setting",
+  "description": "Matchstick Settings",
   "author": "openflint.org",
   "license": "MPL 2.0",
   "version": "0.1"
