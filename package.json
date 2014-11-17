@@ -1,9 +1,9 @@
 {
-  "name": "openflint-wifi-setting",
-  "title": "openflint WIFI Setting",
+  "name": "matchstick-wifi-setting",
+  "title": "Matchstick WIFI Setting",
   "id": "jid1-Qf2BDuHsv2inBA",
-  "description": "openflint WIFI Setting",
-  "author": "Matchstick",
+  "description": "Matchstick WIFI Setting",
+  "author": "openflint.org",
   "license": "MPL 2.0",
   "version": "0.1"
 }
