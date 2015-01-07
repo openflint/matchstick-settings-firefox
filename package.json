@@ -4,6 +4,9 @@
   "id": "jid1-Qf2BDuHsv2inBA",
   "description": "Matchstick Settings",
   "author": "openflint.org",
+  "contributors": ["OffByNone"],
   "license": "MPL 2.0",
-  "version": "0.1"
+  "version": "0.1",
+  "icon":"data/icon-32.png",
+  "icon64":"data/icon-64.png"
 }

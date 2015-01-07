@@ -55,12 +55,12 @@ self.port.on("dongle_found", function(aService, name) {
             $("#dongle-unlist").append(temp);
         }
     }else{
-        $("#dongle-unlist").append(temp);    
+        $("#dongle-unlist").append(temp);
     }
-    
+
     $(".dunsetitem").unbind("click").bind("click", function(e){
         $(".main").hide();
-        let name = $(this).attr("data-name"),
+        var name = $(this).attr("data-name"),
             mac = $(this).attr("data-mac"),
             json = '';
         $(".curr_dname").text(name);
@@ -102,10 +102,10 @@ self.port.on("wifi_found_all", function(wifiList){
     }
 });
 self.port.on("dongle_available", function(aService){
-    let temp = $("#temp-r-dlist").html();
+    var temp = $("#temp-r-dlist").html();
     temp = temp.replaceAll("##name##", aService.friendlyName).replaceAll("##ip##", aService.ipAddress).replaceAll("##mac##","")
 
-    let ditems = $("#dongle-rlist .ditem"),
+    var ditems = $("#dongle-rlist .ditem"),
         flag = false;
     if(ditems.length>=1){
         for (var i = ditems.length - 1; i >= 0; i--) {
@@ -158,8 +158,8 @@ self.port.on("dongle_info", function(resp){
 
 $(document).ready(function(){
     var tz = jstz.determine().name();
-    var lang = navigator.language || navigator.userLanguage; 
-    
+    var lang = navigator.language || navigator.userLanguage;
+
     self.port.emit("page_init");
     var tms = '';
     for (var i=timezones.length-1; i>=0; i--) {
@@ -211,7 +211,7 @@ $(document).ready(function(){
                 timezone = $("#loc").val();
             var dname = $("#dongle-name").val();
             if(!dname){
-                dname = $("#dongle-name").attr("oname"); 
+                dname = $("#dongle-name").attr("oname");
             }
             self.port.emit("set_pwd", wifi_name, wifi_mac, wifi_pwd, dname, timezone);
             $("#btn-set-wifi").addClass("btn-cancel");
@@ -234,6 +234,6 @@ $(document).ready(function(){
         self.port.emit("reset", wifi_name, wifi_mac, wifi_pwd, dname, timezone, dip);
     });
     $("#btn-reboot").click(function(){
-        self.port.emit("reboot", $("#dongle-ip").text()); 
+        self.port.emit("reboot", $("#dongle-ip").text());
     });
 });
